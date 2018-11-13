@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Bree+Serif|Crete+Round|Righteous');
+
+nav{
+	border: none!important;
+	padding: 15px;
+}
+.nav li a{
+	color: #fff!important;
+	font-size: 16px;
+	font-family: 'Bree Serif', serif;
+	transition: 0.3s;
+}
+.nav li a:hover{
+	background-color: #54a0ff!important;
+	border-radius: 5px;
+}
+#staffin{
+	font-size: 20px!important;
+	height: 52px!important;
+	background-color: #54a0ff!important;
+	transition: 0.3s linear;
+	font-family: 'Bree Serif', serif;
+	border-radius: 4px!important;
+}
+#staffin:hover{
+	background-color: #fff!important;
+	color:#54a0ff!important;
+
+}
+.navbar-brand{
+	color: #54a0ff!important;
+	font-size: 40px;
+	font-family: 'Righteous', cursive;
+}
+.enterid input{
+	font-family: 'Bree Serif', serif!important;
+}
+.enterform button{
+	background-color: #54a0ff!important;
+	font-family: 'Bree Serif', serif!important;
+	transition: .3s linear;
+}
+.enterform button:hover{
+	background-color: #fff!important;
+	color: black!important;
+}

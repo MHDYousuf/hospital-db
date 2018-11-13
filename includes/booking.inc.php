@@ -9,8 +9,10 @@
 		$address= $_POST['address'];
 		$department= $_POST['department'];
 		$dateappointment= $_POST['date'];
+		$dob=$_POST['dob'];
+		$dp="Choose Department";
 
-		if(empty($first) || empty($last) || empty($number) || empty($address) || empty($department) || empty($dateappointment)){
+		if(empty($first) || empty($last) || empty($number) || empty($address) || empty($department) || empty($dateappointment) || empty($dob)){
 
 			header("Location: ../booking.php?error=emptyfields&first=".$first."&last=".$last."&number=".$number);
 			exit();
@@ -25,6 +27,10 @@
 		}
 		elseif(!preg_match("/^[a-zA-Z ]*$/", $last)){
 			header("Location: ../booking.php?error=invalidlast");
+			exit();
+		}
+		elseif($department === $dp){
+			header("Location: ../booking.php?error=departmentcheck&first=".$first."&last=".$last);
 			exit();
 		}
 		/*elseif($department !== 'Physician' || $department !== 'Neurology' || $department !== 'Gynecology' || $department !== 'Pediatrician' || $department !== 'Cardiology'){
@@ -51,13 +57,13 @@
 				}*/
 				else{
 
-					$sql="INSERT INTO booking(firstname, lastname, Phonenumber, address, department, dateappointment) VALUES(?, ?, ?, ?, ?, ?)";
+					$sql="INSERT INTO booking(firstname, lastname, Phonenumber, address, department, dateappointment,dob) VALUES(?, ?, ?, ?, ?, ?, ?)";
 					$stmt = mysqli_stmt_init($conn);
 					if(!mysqli_stmt_prepare($stmt,$sql)){
 						header("Location: ../booking.php?error=sqlerror");
 						exit();
 					}else{
-						mysqli_stmt_bind_param($stmt,"ssisss",$first, $last, $number, $address, $department, $dateappointment);
+						mysqli_stmt_bind_param($stmt,"ssissss",$first, $last, $number, $address, $department, $dateappointment, $dob);
 						mysqli_stmt_execute($stmt);
 						header("Location: ../booking.php?booking=success");
 						exit();

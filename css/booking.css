@@ -1,6 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Condensed');
+nav{
+	background: rgba(0,0,0,0.1)!important;
+}
+.nav li a{
+	color: #000!important;
+	font-size: 18px!important;
+}
+.nav li a:hover{
+	color: #fff!important;
+}
 .form-control{
 	margin-bottom: 10px;
 }
 #inputGroupSelect01{
 	width: 100%;
+}
+body{
+	background-image:url(../images/slide2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.cover{
+	transform: translateY(85px);
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 10px 20px 20px #aaa;
+}
+.cover h3{
+	font-family: 'Cabin Condensed', sans-serif;
+	font-size: 30px;
+}
+.form-group label{
+	font-size: 10px;
+}
+.form-group input{
+	font-family: 'Cabin Condensed', sans-serif;
+}
+.form-group button{
+	background-color: #54a0ff!important;
+	border: none!important;
+	transition: .03s linear;
+}
+.form-group button:hover{
+	background-color: #4b4b4b!important;
+	color:white!important;
 }

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Condensed');
+nav{
+	background: rgba(0,0,0,0.1)!important;
+}
+.nav li a{
+	color: #000!important;
+	font-size: 18px!important;
+}
+.nav li a:hover{
+	color: #fff!important;
+}
+.cover{
+	position: relative;
+	top: 120px;
+	color: black;
+}
+body{
+	background-image:url(../images/slide3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.table{
+	background-color: #fff!important;
+	border: none!important;
+}

@@ -13,9 +13,9 @@ require "header.php";
 	</head>
 	<body>
 		<main>
-			<div class="container text-center">
+			<div class="cover container text-center">
 				<section>
-					<div class="row col-sm-4 col-sm-offset-4">
+					<div class="row col-sm-4 col-sm-offset-4 coverdiv">
 						<h3>Sign Up</h3>
 						<?php
 							if(isset($_GET['error'])){
