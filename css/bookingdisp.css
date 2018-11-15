@@ -25,3 +25,30 @@ body{
 	background-color: #fff!important;
 	border: none!important;
 }
+.search{
+	position: relative;
+	top:20vh;
+	margin-bottom: 5vh;
+}
+.search form button{
+	background-color: #54a0ff!important;
+	transition: 0.3s linear;
+	border:none!important;
+}
+.search form button:hover{
+	background-color: #fff!important;
+	color:#54a0ff!important;
+}
+.input-group-addon{
+	color: #fff!important;
+	background-color: #54a0ff!important;
+}
+#searchph{
+	transition: 0.3s linear;
+	border:none!important;
+}
+#searchph:hover{
+	background-color: #fff!important;
+	color:#54a0ff!important;
+	border-bottom: 4px solid #54a0ff!important;
+}

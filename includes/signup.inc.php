@@ -31,7 +31,7 @@
 		}
 		else{
 
-			$sql = "SELECT uidUsers FROM users WHERE uidUsers=?;";
+			$sql = "SELECT uidUsers FROM users1 WHERE uidUsers=?;";
 			$stmt = mysqli_stmt_init($conn);
 			if(!mysqli_stmt_prepare($stmt,$sql)){
 				header("Location: ../signup.php?error=sqlerror");
@@ -49,15 +49,14 @@
 				}
 				else{
 
-					$sql="INSERT INTO users(uidUsers, emailUsers, pwdUsers) VALUES(?, ?, ?)";
+					$sql="INSERT INTO users1(uidUsers, emailUsers, pwdUsers) VALUES(?, ?, ?)";
 					$stmt = mysqli_stmt_init($conn);
 					if(!mysqli_stmt_prepare($stmt,$sql)){
 						header("Location: ../signup.php?error=sqlerror");
 						exit();
 					}else{
-						$hashedPwd = password_hash($password, PASSWORD_DEFAULT);
-
-						mysqli_stmt_bind_param($stmt,"sss",$username, $email, $hashedPwd);
+						/*$hashedPwd = password_hash($password, PASSWORD_DEFAULT);*/
+						mysqli_stmt_bind_param($stmt,"sss",$username, $email, $password);
 						mysqli_stmt_execute($stmt);
 						header("Location: ../signup.php?signup=success");
 						exit();

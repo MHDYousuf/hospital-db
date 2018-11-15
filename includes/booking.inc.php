@@ -57,7 +57,7 @@
 				}*/
 				else{
 
-					$sql="INSERT INTO booking(firstname, lastname, Phonenumber, address, department, dateappointment,dob) VALUES(?, ?, ?, ?, ?, ?, ?)";
+					$sql="INSERT INTO booking1(firstname, lastname, Phonenumber, address, department, dateappointment,dob) VALUES(?, ?, ?, ?, ?, ?, ?)";
 					$stmt = mysqli_stmt_init($conn);
 					if(!mysqli_stmt_prepare($stmt,$sql)){
 						header("Location: ../booking.php?error=sqlerror");
